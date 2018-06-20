@@ -19,8 +19,8 @@ import java.util.concurrent.Semaphore;
 
 public class MainMenu extends Activity{
 
-    private static final String CLIENT_ID = "1d808c5a650d201cf87ce7ff03f5a677d5af6b1ec5e4c0f13c222f68654f23dc\n";
-    private static final String CLIENT_SECRET = "4266691fd9e2a210a3044f78c0a33e4e5f9b5bc6462fbf517572ed3f5f917809\n";
+    private static final String CLIENT_ID = "1d808c5a650d201cf87ce7ff03f5a677d5af6b1ec5e4c0f13c222f68654f23dc";
+    private static final String CLIENT_SECRET = "4266691fd9e2a210a3044f78c0a33e4e5f9b5bc6462fbf517572ed3f5f917809";
     private static final String REDIRECT_URI = "crypto-exchange://coinbase-oauth";
 
 
@@ -88,6 +88,7 @@ public class MainMenu extends Activity{
         setContentView(R.layout.activity_main_menu);
 
         try {
+//            OAuthTokensResponse response = OAuth.completeAuthorization(this, CLIENT_ID, CLIENT_SECRET, mIntent.getData());
             OAuth.beginAuthorization(this, CLIENT_ID, "user", REDIRECT_URI, null);
         } catch (CoinbaseException ex) {
             mTextView.setText("There was an error redirecting to Coinbase: " + ex.getMessage());
