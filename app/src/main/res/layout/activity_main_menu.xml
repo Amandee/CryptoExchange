@@ -32,7 +32,7 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
-            android:onClick="goToReceive"
+            android:onClick="goToRequest"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:text="@string/Receive"
