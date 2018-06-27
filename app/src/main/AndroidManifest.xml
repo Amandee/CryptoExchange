@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity android:name=".LoginScreen" >
-            <intent-filter>
-
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainMenu"
